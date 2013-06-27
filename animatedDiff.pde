@@ -5,8 +5,8 @@ OpenCVPro opencv;
 AnimatedDiff differ;
 
 String inputFilename = "test.jpg";
-String gifFilename = "threshold.gif";
-String label = "threshold(50)";
+String gifFilename = "find_sobel_edges_vertical.gif";
+String label = "findSobelEdges(2,0)";
 
 void setup() {
   img = loadImage(inputFilename);
@@ -16,7 +16,9 @@ void setup() {
   opencv = new OpenCVPro(this, img);
   img = opencv.getSnapshot();
   
-  opencv.threshold(50);
+  // do processing here:
+  opencv.findSobelEdges(2,0);
+  
   dst = opencv.getSnapshot();
 
   PFont f = loadFont("Helvetica-48.vlw");
