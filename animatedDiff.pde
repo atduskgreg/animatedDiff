@@ -21,7 +21,7 @@ void setup() {
 
   PFont f = loadFont("Helvetica-48.vlw");
   textFont(f, 48);
-
+  
   differ = new AnimatedDiff(this, gifFilename);
   differ.setLabel(label);
 }

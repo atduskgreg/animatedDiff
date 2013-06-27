@@ -27,9 +27,9 @@ class AnimatedDiff {
   void drawLabel() {
     if (useLabel) {
       fill(125, 200);
-      rect(0, height-75, textWidth(label) + 30, 75);
+      rect(0, (height-textDescent())-textAscent() - 10, textWidth(label) + 30, textAscent() + textDescent() + 10);
       fill(0);
-      text(label, 15, height-25);
+      text(label, 15, height- textDescent() - 5);
     }
   }
   
